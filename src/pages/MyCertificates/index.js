@@ -4,12 +4,13 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import React, { useState, useEffect } from 'react';
-import CoursesList from '../../components/CoursesList';
+import Certificates from '../../components/Certificates';
 import Copyright from '../../components/Copyright';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
+    alignItems: 'center',
   },
   appBarSpacer: theme.mixins.toolbar,
   content: {
@@ -45,7 +46,16 @@ export default function MyCertificates(props) {
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
           <Grid container spacing={3}>
-            <h1>MEUS CERTIFICADOS</h1>
+            <Certificates
+              hours="5,5"
+              name="Daniel de Andrade Lopes"
+              courseName="Programador Android 2020"
+              date="10/01/2021"
+              author="Daniel Lopes"
+              urlSignature="https://firebasestorage.googleapis.com/v0/b/jacode-stg.appspot.com/o/31-05-2020_17-33-01.png?alt=media&token=b27927fd-7aa3-4264-ae08-13740060608d"
+              school="JACODE CURSOS"
+              site="www.jacode.com.br"
+            />
           </Grid>
         </Container>
         <Box pt={4}>

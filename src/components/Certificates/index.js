@@ -35,7 +35,17 @@ function Template({
     <>
       {progress && <Progress animation="grow" />}
 
-      <ReactToPdf options={options} filename="certificado.pdf" x={0} y={0.5}>
+      <ReactToPdf
+        options={options}
+        filename="certificado.pdf"
+        x={0}
+        y={0.5}
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
         {({ toPdf, targetRef }) => (
           <>
             <Container ref={targetRef}>
