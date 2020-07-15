@@ -3,6 +3,7 @@ import Container from '@material-ui/core/Container';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
+import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
@@ -16,7 +17,7 @@ import CoursesList from '../../components/CoursesList';
 import Footer from '../../components/Footer';
 import ResponsiveNavbar from '../../components/ResponsiveNavbar';
 import { istAuthenticated } from '../../services/auth';
-import Tooltip from '@material-ui/core/Tooltip';
+import BannerTop from '../../components/BannerTop';
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -85,7 +86,7 @@ export default function Main(props) {
       <ResponsiveNavbar />
 
       <main>
-        {/* Hero unit */}
+        <BannerTop />
         <div
           className={classe.heroContent}
           style={{
@@ -95,17 +96,7 @@ export default function Main(props) {
           }}
         >
           <Container maxWidth="sm">
-            <Typography
-              component="h1"
-              variant="h2"
-              align="center"
-              color="textPrimary"
-              gutterBottom
-              style={{ color: '#fff', textShadow: '2px 2px #000' }}
-            >
-              {/* <b>JACODE CURSOS</b> */}
-            </Typography>
-            <Typography
+            {/* <Typography
               variant="h5"
               align="center"
               color="textSecondary"
@@ -119,7 +110,7 @@ export default function Main(props) {
               Bem vindo à JACODE CURSOS!
               <br />
               Aqui você embarca de um jeito e sai de outro!
-            </Typography>
+            </Typography> */}
             <Typography
               variant="h5"
               align="center"
@@ -212,7 +203,7 @@ export default function Main(props) {
                           color: '#fff',
                         }}
                       >
-                        Cadastre-se
+                        MATRICULE-SE
                       </Button>
                     </Link>
                   </Grid>
